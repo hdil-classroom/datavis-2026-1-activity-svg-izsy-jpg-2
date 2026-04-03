@@ -14,24 +14,94 @@
 		#visualization-activity {
 			width: 600px;
 			height: 500px;
+			border: 1px solid #ccc;
 		}
 
 		/* YOUR CSS CODE WILL GO HERE */
+		.axis {
+			stroke: black;
+			stroke-width: 2;
+		}
 
+		.bar-line1 {
+			fill: blue;
+		}
 
+		.bar-line2 {
+			fill: green;
+		}
+
+		.bar-line3 {
+			fill: orangered;
+		}
+
+		.label {
+			font-size: 10px;
+			text-anchor: middle;
+		}
+
+		.value-label {
+			font-size: 10px;
+			text-anchor: middle;
+		}
+
+		.axis-label {
+			font-size: 14px;
+			font-weight: bold;
+		}
+
+		.legend-text {
+			font-size: 12px;
+		}
 	</style>
 </head>
 
 <body>
 	<h1 id="header-title">
-		In-Class Acitivity by REPLACE_WITH_YOUR_NAME
+		In-Class Activity by Izyan Hapiz
 	</h1>
 
-	<svg id="visualization-activity">
-		<!-- YOUR SVG CODE WILL GO HERE -->
+	<svg id="visualization-activity" viewBox="0 0 600 500">
+		<!-- Axes -->
+		<line class="axis" x1="60" y1="40" x2="60" y2="420"></line>
+		<line class="axis" x1="60" y1="420" x2="560" y2="420"></line>
 
+		<!-- Y-axis label -->
+		<text class="axis-label" x="20" y="250" transform="rotate(-90 20 250)">Entry Count</text>
 
+		<!-- X-axis label -->
+		<text class="axis-label" x="250" y="470">Station Name</text>
+
+		<!-- Hongdae -->
+		<rect class="bar-line2" x="80" y="100" width="50" height="320"></rect>
+		<text class="value-label" x="105" y="90">72,874</text>
+		<text class="label" x="105" y="440">Hongdae</text>
+
+		<!-- Jamsil -->
+		<rect class="bar-line2" x="155" y="143" width="50" height="277"></rect>
+		<text class="value-label" x="180" y="133">63,085</text>
+		<text class="label" x="180" y="440">Jamsil</text>
+
+		<!-- Express Bus Terminal -->
+		<rect class="bar-line3" x="230" y="185" width="50" height="235"></rect>
+		<text class="value-label" x="255" y="175">53,566</text>
+		<text class="label" x="255" y="440">Express Bus</text>
+		<text class="label" x="255" y="455">Terminal</text>
+
+		<!-- Seoul Station -->
+		<rect class="bar-line1" x="305" y="242" width="50" height="178"></rect>
+		<text class="value-label" x="330" y="232">40,617</text>
+		<text class="label" x="330" y="440">Seoul Station</text>
+
+		<!-- Sillim -->
+		<rect class="bar-line2" x="380" y="252" width="50" height="168"></rect>
+		<text class="value-label" x="405" y="242">38,271</text>
+		<text class="label" x="405" y="440">Sillim</text>
+
+		<!-- Sindorim -->
+		<rect class="bar-line2" x="455" y="255" width="50" height="165"></rect>
+		<text class="value-label" x="480" y="245">37,521</text>
+		<text class="label" x="480" y="440">Sindorim</text>
 	</svg>
-
 </body>
 </html>
